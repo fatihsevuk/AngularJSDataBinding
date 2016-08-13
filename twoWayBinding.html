@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+    İsim:<input ng-model="firstName">
+    <h1>{{firstName}}</h1>
+
+</div>
+<script>
+
+    var app=angular.module("myApp" , []);
+
+    app.controller("myCtrl" , function ($scope) {
+        $scope.firstName="ahmet";
+        $scope.lastName="yılmaz";
+    })
+
+
+</script>
+<p>input un içeriğini değiştirirek modeldeki datamızda otomatik değişir.</p>
+
+</body>
+</html>
